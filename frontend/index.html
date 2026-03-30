@@ -2,176 +2,133 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<title>Joaquin Baigorria | Software Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Joaquin Baigorria | Cloud Architect & Software Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+    <header>
+        <div class="top-bar">
+            <h1 class="name">Joaquin Baigorria</h1>
+            <div class="links">
+                <a href="mailto:joaquinbaigorria22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/Jbaigorria22"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/joaquinbaigorria/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="subtitle">
+            Cloud Solutions Architect | Data & Machine Learning
+        </p>
+    </header>
 
-<div class="top-bar">
+    <div class="container"> <section>
+            <h2>Perfil</h2>
+            <p>
+                Estudiante de Analista de Sistemas enfocado en arquitectura Cloud, automatización DevOps y Machine Learning. 
+                Especializado en diseñar soluciones Serverless escalables y eficientes bajo el AWS Well-Architected Framework.
+            </p>
+        </section>
 
-<h1 class="name">Joaquin Baigorria</h1>
+        <section>
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <span>AWS (Lambda, DynamoDB, S3)</span>
+                <span>Terraform (IaC)</span>
+                <span>Docker</span>
+                <span>GitHub Actions (CI/CD)</span>
+                <span>Python (FastAPI, Boto3)</span>
+                <span>SQL / MySQL</span>
+                <span>Machine Learning (Scikit-learn)</span>
+                <span>Pandas</span>
+                <span>Streamlit</span>
+                <span>Git</span>
+            </div>
+        </section>
 
-<div class="links">
+        <section>
+            <h2>Proyectos</h2>
 
-<a href="mailto:joaquinbaigorria22@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-</a>
+            <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
+                <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
+                <p>
+                    Plataforma Serverless de control de inventario con IA. Arquitectura automatizada que analiza riesgos de stock y genera planes de compra mediante lenguaje natural.
+                </p>
+                <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                    <li>Infraestructura como Código (IaC) con <strong>Terraform</strong>.</li>
+                    <li>Pipeline CI/CD automatizado con <strong>GitHub Actions</strong> y <strong>Docker</strong>.</li>
+                    <li>Backend Serverless con <strong>AWS Lambda</strong> y <strong>FastAPI</strong>.</li>
+                    <li>Seguridad avanzada con <strong>AWS SSM Parameter Store</strong>.</li>
+                </ul>
+                <p class="tech">
+                    AWS · Terraform · Docker · OpenAI · Python · CI/CD
+                </p>
+                <div style="margin-top: 10px;">
+                    <a href="https://nexastock-ai.streamlit.app/" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #4f46e5;">Ver Demo Real →</a>
+                </div>
+            </div>
 
-<a href="https://github.com/Jbaigorria22">
-<i class="fa-brands fa-github"></i>
-</a>
+            <div class="project">
+                <h3>AWS Cloud Resume Challenge</h3>
+                <p>
+                    Despliegue de este currículum vitae en la nube. Arquitectura construida con Amazon S3, CloudFront, API Gateway, Lambda y DynamoDB.
+                </p>
+                <p class="tech">
+                    AWS · Python · Serverless · CI/CD
+                </p>
+            </div>
 
-<a href="https://linkedin.com/in/joaquinbaigorria/">
-<i class="fa-brands fa-linkedin"></i>
-</a>
+            <div class="project">
+                <h3>MarketPulse — Financial ML Dashboard</h3>
+                <p>
+                    Sistema de análisis financiero con modelos de Machine Learning para predicción de precios de acciones.
+                </p>
+                <p class="tech">
+                    Python · Scikit-learn · AWS · Streamlit · Docker
+                </p>
+            </div>
 
-</div>
+            <div class="project">
+                <h3>TechZone — Demand Forecasting System</h3>
+                <p>
+                    Predicción de demanda basada en datos históricos de ventas utilizando modelos de forecasting.
+                </p>
+                <p class="tech">
+                    Python · Pandas · Prophet
+                </p>
+            </div>
 
-</div>
+        </section>
 
-<p class="subtitle">
-Software Developer | Data & Machine Learning
-</p>
+        <section>
+            <h2>Educación</h2>
+            <p>
+                Analista de Sistemas de Computación — En curso<br>
+                Colegio Universitario IES — Córdoba
+            </p>
+        </section>
 
-</header>
+        <section>
+            <h2>Certificaciones</h2>
+            <ul>
+                <li>Introduction to Artificial Intelligence — IBM</li>
+                <li>Generative AI: Prompt Engineering — IBM</li>
+                <li>AWS Cloud Quest: Cloud Practitioner — AWS</li>
+                <li>AWS Cloud Quest: IA Generativa Practitioner — AWS</li>
+            </ul>
+        </section>
 
-<section>
+        <section>
+            <h2>Visitor Counter</h2>
+            <p>Visitas: <span id="counter">loading...</span></p>
+        </section>
 
-<h2>Perfil</h2>
+    </div>
 
-<p>
-Estudiante de Analista de Sistemas enfocado en desarrollo de software, análisis de datos
-y Machine Learning. Me especializo en aprender construyendo proyectos reales donde aplico
-Python, tecnologías cloud y modelos de Machine Learning.
-</p>
-
-</section>
-
-<section>
-
-<h2>Habilidades</h2>
-
-<div class="skills">
-
-<span>Python</span>
-<span>SQL</span>
-<span>C#</span>
-<span>Pandas</span>
-<span>Scikit-learn</span>
-<span>Machine Learning</span>
-<span>AWS</span>
-<span>Docker</span>
-<span>Git</span>
-<span>Streamlit</span>
-<span>MySQL</span>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Proyectos</h2>
-<div class="project">
-    <h3>AWS Cloud Resume Challenge</h3>
-    <p>
-        Despliegue de un currículum vitae serverless en la nube. Arquitectura construida con Amazon S3, CloudFront, API Gateway, Lambda y DynamoDB. Integración y despliegue continuo (CI/CD) automatizado con GitHub Actions.
-    </p>
-    <p class="tech">
-        AWS · Python · Serverless · CI/CD · GitHub Actions
-    </p>
-</div>
-<div class="project">
-
-<h3>MarketPulse — Financial ML Dashboard</h3>
-
-<p>
-Sistema de análisis financiero con modelos de Machine Learning
-para predicción de precios de acciones y visualización de resultados.
-</p>
-
-<p class="tech">
-Python · Pandas · Scikit-learn · AWS · Streamlit · Docker
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>TechZone — Demand Forecasting System</h3>
-
-<p>
-Predicción de demanda basada en datos históricos de ventas
-utilizando modelos de forecasting.
-</p>
-
-<p class="tech">
-Python · Pandas · Prophet · Data Analysis
-</p>
-
-</div>
-
-<div class="project">
-
-<h3>Sistema de Gestión de Reclamos</h3>
-
-<p>
-Aplicación backend desarrollada con Python y Flask
-para registro y seguimiento de incidencias.
-</p>
-
-<p class="tech">
-Python · Flask · SQL · HTML · CSS
-</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>Educación</h2>
-
-<p>
-Analista de Sistemas de Computación — En curso<br>
-Colegio Universitario IES — Córdoba
-</p>
-
-</section>
-
-<section>
-
-<h2>Certificaciones</h2>
-
-<ul>
-
-<li>Introduction to Artificial Intelligence — IBM</li>
-<li>Generative AI: Prompt Engineering — IBM</li>
-<li>Crash Course on Python — Google</li>
-<li>Database Structures and Management with MySQL — Meta</li>
-<li>AWS Cloud Quest: Cloud Practitioner — AWS</li>
-<li>AWS Cloud Quest: IA Generativa Practitioner — AWS</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2>Visitor Counter</h2>
-
-<p>Visitas: <span id="counter">loading...</span></p>
-
-</section>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
