@@ -25,7 +25,8 @@
         </p>
     </header>
 
-    <div class="container"> <section>
+    <div class="container"> 
+        <section>
             <h2>Perfil</h2>
             <p>
                 Estudiante de Analista de Sistemas enfocado en arquitectura Cloud, automatización DevOps y Machine Learning. 
@@ -51,6 +52,27 @@
 
         <section>
             <h2>Proyectos</h2>
+
+            <div class="project highlight" style="border-left: 4px solid #f97316; padding-left: 15px; margin-bottom: 30px;">
+                <h3 style="color: #f97316;">S3ntient — AI-Powered Document Assistant (RAG)</h3>
+                <p>
+                    Arquitectura multiusuario 100% Serverless en AWS. Permite a los usuarios subir PDFs de forma segura y realizar consultas en lenguaje natural basadas estrictamente en el contenido de los documentos.
+                </p>
+                <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                    <li>Infraestructura provisionada con <strong>Terraform</strong> y Lambdas en contenedores <strong>Docker</strong>.</li>
+                    <li>Seguridad en capas con <strong>Cognito (JWT)</strong>, CloudFront OAC y URLs pre-firmadas en S3.</li>
+                    <li>Procesamiento asíncrono con <strong>SQS</strong> para evitar timeouts en archivos pesados.</li>
+                    <li>Embeddings generados con <strong>OpenAI</strong> y almacenados en <strong>DynamoDB</strong> para búsqueda vectorial.</li>
+                </ul>
+                <p class="tech">
+                    AWS · Terraform · Docker · Python · OpenAI RAG · SQS
+                </p>
+                <div style="margin-top: 10px;">
+                    <a href="https://d2uq847i13fd7d.cloudfront.net" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #f97316;">Ver Demo Real →</a>
+                    <span style="margin: 0 10px; color: #ccc;">|</span>
+                    <a href="https://github.com/Jbaigorria22/s3ntient" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #555;">Ver Código <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
 
             <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
                 <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
