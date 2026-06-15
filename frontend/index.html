@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Joaquin Baigorria | Cloud Architect & Software Developer</title>
+    <title>Joaquin Baigorria | AWS Cloud Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -11,146 +12,208 @@
 
 <body>
 
-    <header>
-        <div class="top-bar">
-            <h1 class="name">Joaquin Baigorria</h1>
-            <div class="links">
-                <a href="mailto:joaquinbaigorria22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://github.com/Jbaigorria22"><i class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/joaquinbaigorria/"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+```
+<header>
+    <div class="top-bar">
+        <h1 class="name">Joaquin Baigorria</h1>
+        <div class="links">
+            <a href="mailto:joaquinbaigorria22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Jbaigorria22"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/joaquinbaigorria/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <p class="subtitle">
-            Cloud Solutions Architect | Data & Machine Learning
-        </p>
-    </header>
-
-    <div class="container"> 
-        <section>
-            <h2>Perfil</h2>
-            <p>
-                Estudiante de Analista de Sistemas enfocado en arquitectura Cloud, automatización DevOps y Machine Learning. 
-                Especializado en diseñar soluciones Serverless escalables y eficientes bajo el AWS Well-Architected Framework.
-            </p>
-        </section>
-
-        <section>
-            <h2>Habilidades</h2>
-            <div class="skills">
-                <span>AWS (Lambda, DynamoDB, S3)</span>
-                <span>Terraform (IaC)</span>
-                <span>Docker</span>
-                <span>GitHub Actions (CI/CD)</span>
-                <span>Python (FastAPI, Boto3)</span>
-                <span>SQL / MySQL</span>
-                <span>Machine Learning (Scikit-learn)</span>
-                <span>Pandas</span>
-                <span>Streamlit</span>
-                <span>Git</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Proyectos</h2>
-
-            <div class="project highlight" style="border-left: 4px solid #f97316; padding-left: 15px; margin-bottom: 30px;">
-                <h3 style="color: #f97316;">S3ntient — AI-Powered Document Assistant (RAG)</h3>
-                <p>
-                    Arquitectura multiusuario 100% Serverless en AWS. Permite a los usuarios subir PDFs de forma segura y realizar consultas en lenguaje natural basadas estrictamente en el contenido de los documentos.
-                </p>
-                <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
-                    <li>Infraestructura provisionada con <strong>Terraform</strong> y Lambdas en contenedores <strong>Docker</strong>.</li>
-                    <li>Seguridad en capas con <strong>Cognito (JWT)</strong>, CloudFront OAC y URLs pre-firmadas en S3.</li>
-                    <li>Procesamiento asíncrono con <strong>SQS</strong> para evitar timeouts en archivos pesados.</li>
-                    <li>Embeddings generados con <strong>OpenAI</strong> y almacenados en <strong>DynamoDB</strong> para búsqueda vectorial.</li>
-                </ul>
-                <p class="tech">
-                    AWS · Terraform · Docker · Python · OpenAI RAG · SQS
-                </p>
-                <div style="margin-top: 10px;">
-                    <a href="https://d2uq847i13fd7d.cloudfront.net" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #f97316;">Ver Demo Real →</a>
-                    <span style="margin: 0 10px; color: #ccc;">|</span>
-                    <a href="https://github.com/Jbaigorria22/s3ntient" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #555;">Ver Código <i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-
-            <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
-                <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
-                <p>
-                    Plataforma Serverless de control de inventario con IA. Arquitectura automatizada que analiza riesgos de stock y genera planes de compra mediante lenguaje natural.
-                </p>
-                <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
-                    <li>Infraestructura como Código (IaC) con <strong>Terraform</strong>.</li>
-                    <li>Pipeline CI/CD automatizado con <strong>GitHub Actions</strong> y <strong>Docker</strong>.</li>
-                    <li>Backend Serverless con <strong>AWS Lambda</strong> y <strong>FastAPI</strong>.</li>
-                    <li>Seguridad avanzada con <strong>AWS SSM Parameter Store</strong>.</li>
-                </ul>
-                <p class="tech">
-                    AWS · Terraform · Docker · OpenAI · Python · CI/CD
-                </p>
-                <div style="margin-top: 10px;">
-                    <a href="https://nexastock-ai.streamlit.app/" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #4f46e5;">Ver Demo Real →</a>
-                </div>
-            </div>
-
-            <div class="project">
-                <h3>AWS Cloud Resume Challenge</h3>
-                <p>
-                    Despliegue de este currículum vitae en la nube. Arquitectura construida con Amazon S3, CloudFront, API Gateway, Lambda y DynamoDB.
-                </p>
-                <p class="tech">
-                    AWS · Python · Serverless · CI/CD
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>MarketPulse — Financial ML Dashboard</h3>
-                <p>
-                    Sistema de análisis financiero con modelos de Machine Learning para predicción de precios de acciones.
-                </p>
-                <p class="tech">
-                    Python · Scikit-learn · AWS · Streamlit · Docker
-                </p>
-            </div>
-
-            <div class="project">
-                <h3>TechZone — Demand Forecasting System</h3>
-                <p>
-                    Predicción de demanda basada en datos históricos de ventas utilizando modelos de forecasting.
-                </p>
-                <p class="tech">
-                    Python · Pandas · Prophet
-                </p>
-            </div>
-
-        </section>
-
-        <section>
-            <h2>Educación</h2>
-            <p>
-                Analista de Sistemas de Computación — En curso<br>
-                Colegio Universitario IES — Córdoba
-            </p>
-        </section>
-
-        <section>
-            <h2>Certificaciones</h2>
-            <ul>
-                <li>Introduction to Artificial Intelligence — IBM</li>
-                <li>Generative AI: Prompt Engineering — IBM</li>
-                <li>AWS Cloud Quest: Cloud Practitioner — AWS</li>
-                <li>AWS Cloud Quest: IA Generativa Practitioner — AWS</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Visitor Counter</h2>
-            <p>Visitas: <span id="counter">loading...</span></p>
-        </section>
-
     </div>
 
-    <script src="script.js"></script>
+    <p class="subtitle">
+        AWS Cloud Engineer | Terraform | Python | Serverless Architecture | Generative AI & RAG Systems | SAA-C03 Candidate
+    </p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Profile</h2>
+        <p>
+            Systems Analyst student focused on AWS Cloud Architecture, Infrastructure as Code, Serverless Computing and Generative AI solutions.
+            Experienced in designing and deploying secure, scalable and highly available cloud environments using AWS, Terraform and Python.
+            Passionate about solving complex technical problems through automation, cloud-native architectures and systematic troubleshooting.
+        </p>
+
+        <p>
+            Currently preparing for the AWS Certified Solutions Architect – Associate (SAA-C03) certification while building hands-on projects focused on Cloud Engineering, DevOps and AI-powered applications.
+        </p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <span>AWS (EC2, VPC, ALB, Auto Scaling, Lambda, DynamoDB, S3)</span>
+            <span>Terraform</span>
+            <span>Infrastructure as Code (IaC)</span>
+            <span>Python</span>
+            <span>Docker</span>
+            <span>GitHub Actions</span>
+            <span>CI/CD</span>
+            <span>Networking</span>
+            <span>Cloud Security</span>
+            <span>Serverless Architecture</span>
+            <span>Generative AI</span>
+            <span>RAG Systems</span>
+            <span>SQL / MySQL</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project highlight" style="border-left: 4px solid #f97316; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #f97316;">S3ntient — AI-Powered Document Assistant (RAG)</h3>
+
+            <p>
+                100% Serverless multi-tenant AWS architecture that allows users to securely upload PDFs and query them using natural language through Retrieval-Augmented Generation (RAG).
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Infrastructure provisioned with <strong>Terraform</strong> and containerized AWS Lambda functions using <strong>Docker</strong>.</li>
+                <li>Layered security with <strong>Cognito JWT authentication</strong>, CloudFront OAC and pre-signed S3 URLs.</li>
+                <li>Asynchronous processing with <strong>SQS</strong> to handle large document ingestion.</li>
+                <li>OpenAI embeddings stored in <strong>DynamoDB</strong> to support vector search.</li>
+            </ul>
+
+            <p class="tech">
+                AWS · Terraform · Docker · Python · OpenAI RAG · SQS
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://d2uq847i13fd7d.cloudfront.net" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #f97316;">Live Demo →</a>
+                <span style="margin: 0 10px; color: #ccc;">|</span>
+                <a href="https://github.com/Jbaigorria22/s3ntient" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #555;">Source Code <i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="project highlight" style="border-left: 4px solid #16a34a; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #16a34a;">La Fortaleza — AWS Highly Available Infrastructure</h3>
+
+            <p>
+                Designed and deployed a highly available and secure AWS infrastructure across multiple Availability Zones using Terraform.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Custom VPC with public and private subnets across two Availability Zones.</li>
+                <li>Application Load Balancer distributing traffic across EC2 instances.</li>
+                <li>Auto Scaling Group with ELB health checks.</li>
+                <li>NAT Gateway enabling secure outbound internet access from private instances.</li>
+                <li>Defense-in-depth security using Security Groups and Network ACLs.</li>
+                <li>Fully provisioned through Infrastructure as Code with Terraform.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Diagnosed and resolved a 502 Bad Gateway issue caused by a missing egress rule in a public Network ACL. Due to the stateless nature of NACLs, return traffic through the NAT Gateway was silently blocked, preventing package installation during EC2 bootstrap and causing unhealthy instances.
+            </p>
+
+            <p class="tech">
+                AWS · Terraform · VPC · EC2 · Auto Scaling · Application Load Balancer · NAT Gateway · Networking · Cloud Security
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/la-fortaleza-aws" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #16a34a;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
+
+            <p>
+                Serverless AI-powered inventory management platform that analyzes stock risks and generates procurement recommendations through natural language interaction.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Infrastructure as Code using <strong>Terraform</strong>.</li>
+                <li>Automated CI/CD pipeline with <strong>GitHub Actions</strong> and <strong>Docker</strong>.</li>
+                <li>Serverless backend powered by <strong>AWS Lambda</strong> and <strong>FastAPI</strong>.</li>
+                <li>Secure configuration management through <strong>AWS SSM Parameter Store</strong>.</li>
+            </ul>
+
+            <p class="tech">
+                AWS · Terraform · Docker · OpenAI · Python · CI/CD
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://nexastock-ai.streamlit.app/" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #4f46e5;">Live Demo →</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>AWS Cloud Resume Challenge</h3>
+
+            <p>
+                Cloud-native resume deployed on AWS using S3, CloudFront, API Gateway, Lambda and DynamoDB. Includes visitor counter functionality, Infrastructure as Code practices and automated deployment workflows.
+            </p>
+
+            <p class="tech">
+                AWS · Python · Serverless · CI/CD
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>MarketPulse — Financial ML Dashboard</h3>
+
+            <p>
+                Financial analytics platform leveraging Machine Learning models to forecast stock market trends and support investment decision-making.
+            </p>
+
+            <p class="tech">
+                Python · Scikit-learn · AWS · Streamlit · Docker
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>TechZone — Demand Forecasting System</h3>
+
+            <p>
+                Demand forecasting solution based on historical sales data using predictive analytics techniques.
+            </p>
+
+            <p class="tech">
+                Python · Pandas · Prophet
+            </p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Education</h2>
+
+        <p>
+            Systems Analyst Degree — In Progress<br>
+            Colegio Universitario IES — Córdoba, Argentina
+        </p>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+
+        <ul>
+            <li>Introduction to Artificial Intelligence — IBM</li>
+            <li>Generative AI: Prompt Engineering — IBM</li>
+            <li>AWS Cloud Quest: Cloud Practitioner — AWS</li>
+            <li>AWS Cloud Quest: Generative AI Practitioner — AWS</li>
+            <li>AWS Certified Solutions Architect – Associate (SAA-C03) — In Progress</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Visitor Counter</h2>
+        <p>Visits: <span id="counter">loading...</span></p>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+```
 
 </body>
+
 </html>
