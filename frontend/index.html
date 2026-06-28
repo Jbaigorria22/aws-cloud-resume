@@ -121,6 +121,36 @@
                 </a>
             </div>
         </div>
+        <div class="project highlight" style="border-left: 4px solid #0ea5e9; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #0ea5e9;">P3 — Multi-Tier Web App + RDS Multi-AZ</h3>
+
+            <p>
+                Three-tier AWS architecture with full network isolation between presentation, application, and data layers. Built hands-on in the AWS console and codified in Terraform.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Custom VPC with 6 subnets across 2 Availability Zones — public, private app, and isolated DB tiers.</li>
+                <li>Application Load Balancer distributing traffic across EC2 instances in separate AZs.</li>
+                <li>RDS MySQL with <strong>Multi-AZ deployment</strong> — synchronous replication and automatic failover.</li>
+                <li>Defense-in-depth with nested Security Groups: ALB → EC2 → RDS, no direct internet access to data layer.</li>
+                <li>Bastion Host as the only SSH entry point into private instances.</li>
+                <li>Full infrastructure codified in <strong>Terraform</strong> with modular file structure.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Debugged a silent connection timeout on port 3306 — traced to a missing inbound rule on the RDS Security Group. Unlike a refused connection, a timeout with no error message requires methodical layer-by-layer inspection of Security Group rules.
+            </p>
+
+            <p class="tech">
+                AWS · Terraform · VPC · ALB · EC2 · RDS MySQL · Multi-AZ · Networking · Cloud Security
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/p3-multitier-aws" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #0ea5e9;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
 
         <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
