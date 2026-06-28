@@ -151,6 +151,35 @@
                 </a>
             </div>
         </div>
+        <div class="project highlight" style="border-left: 4px solid #dc2626; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #dc2626;">P2 — IAM in Depth: Zero Trust Identity Architecture</h3>
+
+            <p>
+                Zero Trust identity architecture on AWS — built ClickOps first, then fully codified in Terraform. Every permission flows through groups or roles; no user holds direct policies.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>AWS Organizations with <strong>SCP</strong> enforcing region isolation at root level — blocks all actions outside sa-east-1, even for AdministratorAccess.</li>
+                <li>IAM Identity Center (SSO) with Permission Sets — centralized access replacing manual cross-account role assignments.</li>
+                <li><strong>Permission Boundaries</strong> as a hard ceiling — developer persona cannot escalate beyond EC2 + CloudWatch regardless of identity policies.</li>
+                <li>STS AssumeRole for temporary credentials — no long-lived access keys on EC2 instances.</li>
+                <li>Custom policies: region-locked S3 access, explicit deny, MFA delete protection.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Self-inflicted access denial after removing direct permissions before group inheritance was fully applied. Resolved via root MFA authentication, state verification, and clean group-based access restoration — entirely through IaC, no manual policy changes.
+            </p>
+
+            <p class="tech">
+                AWS · Terraform · IAM · AWS Organizations · SCP · IAM Identity Center · STS · Cloud Security
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/p2-iam-portfolio" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #dc2626;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
 
         <div class="project highlight" style="border-left: 4px solid #4f46e5; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #4f46e5;">NexaStock AI — Intelligent Supply Chain Control Tower</h3>
