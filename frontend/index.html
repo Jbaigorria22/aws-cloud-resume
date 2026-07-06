@@ -92,7 +92,7 @@
         </div>
 
         <div class="project highlight" style="border-left: 4px solid #16a34a; padding-left: 15px; margin-bottom: 30px;">
-            <h3 style="color: #16a34a;">La Fortaleza — AWS Highly Available Infrastructure</h3>
+            <h3 style="color: #16a34a;">P1 — La Fortaleza — AWS Highly Available Infrastructure</h3>
 
             <p>
                 Designed and deployed a highly available and secure AWS infrastructure across multiple Availability Zones using Terraform.
@@ -151,6 +151,35 @@
                 </a>
             </div>
         </div>
+        <div class="project highlight" style="border-left: 4px solid #9333ea; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #9333ea;">P4 — AI Gallery Storage Pipeline: S3 + CloudFront + OAC</h3>
+
+            <p>
+                Secure, cost-conscious AWS storage pipeline for AI-generated images — built first by hand in the console to understand every moving part, then rebuilt as reproducible Infrastructure as Code with Terraform.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>CloudFront <strong>Origin Access Control (OAC)</strong> as the only path to a fully private S3 bucket — Block Public Access on, ACLs disabled via <strong>BucketOwnerEnforced</strong>.</li>
+                <li>S3 bucket policy scoped with an <strong>AWS:SourceArn</strong> condition — trusts requests from this specific CloudFront distribution only, not "any CloudFront distribution."</li>
+                <li>Storage tiering by object prefix: <strong>S3 Intelligent-Tiering</strong> for full-resolution images, lifecycle transition to <strong>Glacier</strong> after 90 days for archived content, S3 Standard for thumbnails.</li>
+                <li>Every object encrypted server-side (SSE-S3); infrastructure fully codified in Terraform (AWS provider <code>~> 5.0</code>).</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Verified the security boundary end-to-end — a direct request to the S3 object URL returns <code>AccessDenied</code>, while the same object requested through the CloudFront domain resolves correctly, confirming the bucket policy's <code>SourceArn</code> condition trusts only this specific distribution rather than CloudFront broadly.
+            </p>
+
+            <p class="tech">
+                AWS · Terraform · S3 · CloudFront · OAC · IAM · Lifecycle Policies · Intelligent-Tiering · Glacier
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/p4-ai-gallery" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #9333ea;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
         <div class="project highlight" style="border-left: 4px solid #dc2626; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #dc2626;">P2 — IAM in Depth: Zero Trust Identity Architecture</h3>
 
@@ -202,18 +231,6 @@
             <div style="margin-top: 10px;">
                 <a href="https://nexastock-ai.streamlit.app/" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #4f46e5;">Live Demo →</a>
             </div>
-        </div>
-
-        <div class="project">
-            <h3>AWS Cloud Resume Challenge</h3>
-
-            <p>
-                Cloud-native resume deployed on AWS using S3, CloudFront, API Gateway, Lambda and DynamoDB. Includes visitor counter functionality, Infrastructure as Code practices and automated deployment workflows.
-            </p>
-
-            <p class="tech">
-                AWS · Python · Serverless · CI/CD
-            </p>
         </div>
 
         <div class="project">
