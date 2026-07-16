@@ -180,6 +180,36 @@
             </div>
         </div>
 
+        <div class="project highlight" style="border-left: 4px solid #db2777; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #db2777;">P6 — Multi-Region Disaster Recovery (Pilot Light)</h3>
+
+            <p>
+                Multi-region Disaster Recovery architecture using the Pilot Light pattern, 100% defined in Terraform, deployed across <code>sa-east-1</code> (primary) and <code>us-east-1</code> (DR), with a real, documented failover test.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>2 non-overlapping VPCs, 3-tier subnetting across 2 AZs x 2 regions; RDS MySQL Multi-AZ in primary with a cross-region Read Replica in DR.</li>
+                <li>ALB + Auto Scaling Group in both regions — primary active (desired=2), DR in Pilot Light (desired=0).</li>
+                <li><strong>Route 53 Failover Routing</strong> with a Health Check on the primary ALB; automatic DNS failover on detection (~90s).</li>
+                <li>CloudWatch Alarms + SNS on Health Check status and RDS Replica Lag; no SSH — instance access exclusively via SSM.</li>
+                <li>5 independent Terraform modules wired via aliased providers (<code>aws.primary</code> / <code>aws.dr</code>).</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> A cross-region encrypted RDS Read Replica doesn't inherit the primary region's KMS key — KMS keys are regional, so the DR replica needed its own explicit <code>kms_key_id</code> in <code>us-east-1</code>. Also surfaced that Route 53 health check metrics, despite being a global service, only publish to CloudWatch in <code>us-east-1</code> regardless of the monitored region.
+            </p>
+
+            <p class="tech">
+                AWS · Terraform · Multi-Region · RDS Multi-AZ · Route 53 Failover · Auto Scaling · CloudWatch · SNS · KMS · Disaster Recovery
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/p6-disaster-recovery" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #db2777;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
         <div class="project highlight" style="border-left: 4px solid #dc2626; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #dc2626;">P2 — IAM in Depth: Zero Trust Identity Architecture</h3>
 
