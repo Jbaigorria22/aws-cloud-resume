@@ -263,28 +263,60 @@
             </div>
         </div>
 
-        <div class="project">
-            <h3>MarketPulse — Financial ML Dashboard</h3>
+        <div class="project highlight" style="border-left: 4px solid #0d9488; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #0d9488;">MarketPulse — Financial ML Dashboard</h3>
 
             <p>
-                Financial analytics platform leveraging Machine Learning models to forecast stock market trends and support investment decision-making.
+                End-to-end Machine Learning pipeline for stock price prediction, deployed on AWS with daily automated retraining and a professional fintech-style dashboard.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li><strong>Random Forest Regressor</strong> trained on 2 years of historical OHLCV data, with engineered features (moving averages, volatility, momentum).</li>
+                <li>Automated daily retraining via <strong>AWS Lambda</strong> (Docker container) triggered by <strong>EventBridge</strong>, with data, features and models versioned in <strong>S3</strong>.</li>
+                <li>Interactive Streamlit + Plotly dashboard — candlestick charts, 15-day forecast with uncertainty bands, and confidence scoring.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Avoided a classic time-series pitfall — a random train/test split would leak future price information into training. Enforced a chronological 80/20 split and derived prediction confidence from inter-tree variance in the Random Forest instead of a fixed error margin.
             </p>
 
             <p class="tech">
-                Python · Scikit-learn · AWS · Streamlit · Docker
+                Python · Scikit-learn · Pandas · Streamlit · Plotly · Docker · AWS (S3, Lambda, ECR, EventBridge)
             </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://marketpuls3.streamlit.app" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #0d9488;">Live Demo →</a>
+                <span style="margin: 0 10px; color: #ccc;">|</span>
+                <a href="https://github.com/Jbaigorria22/marketpulse" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #555;">Source Code <i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
 
-        <div class="project">
-            <h3>TechZone — Demand Forecasting System</h3>
+        <div class="project highlight" style="border-left: 4px solid #d97706; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #d97706;">TechZone — Demand Forecasting System</h3>
 
             <p>
-                Demand forecasting solution based on historical sales data using predictive analytics techniques.
+                Demand forecasting system for tech retail, combining a Machine Learning forecasting model with classic Supply Chain inventory concepts.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li><strong>Prophet</strong> (Meta) forecasting model with 80% confidence intervals, benchmarked against Simple Moving Average and Exponential Smoothing baselines.</li>
+                <li><strong>ABC analysis</strong> classifying inventory by revenue contribution (80/20 rule), plus automatic Reorder Point (ROP) and Economic Order Quantity (EOQ) calculations.</li>
+                <li>Interactive Streamlit dashboard with a dark-themed UI and multi-sheet Excel export for management reporting.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Benchmarked Prophet's seasonal decomposition against Simple Moving Average and Exponential Smoothing baselines on the same historical data — Prophet cut MAPE from ~25% to 3.9%, an 83% error reduction that gave a measured justification for the added model complexity instead of assuming a fancier model would perform better.
             </p>
 
             <p class="tech">
-                Python · Pandas · Prophet
+                Python · Pandas · Prophet · SQLite · Streamlit · Matplotlib · OpenPyXL
             </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/techzone-forecast" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #d97706;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
     </section>
