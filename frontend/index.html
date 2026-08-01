@@ -91,6 +91,36 @@
             </div>
         </div>
 
+        <div class="project highlight" style="border-left: 4px solid #0891b2; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #0891b2;">S3ntient on EKS — Kubernetes Security Deep Dive</h3>
+
+            <p>
+                Migrated the S3ntient RAG application from AWS Lambda to Amazon EKS, with Kubernetes security as the core focus: IRSA, RBAC and Network Policies, each implemented and verified with real evidence rather than assumed to work. Fully ephemeral infrastructure — provisioned and destroyed via Terraform for each work session.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Purpose-built VPC for EKS — subnet tags and CIDR sizing for per-pod IPs via the VPC CNI.</li>
+                <li><strong>IRSA</strong> for credential-free AWS access from pods via OIDC federation — verified by asserting the assumed role identity from inside a running pod, zero static keys.</li>
+                <li><strong>RBAC</strong> with least-privilege Roles — verified by confirming a denied action correctly returns <code>Forbidden</code>.</li>
+                <li><strong>Network Policies</strong> with a default-deny pattern — verified by confirming blocked traffic actually times out before adding explicit exceptions.</li>
+                <li>Migrated from Lambda handlers to a containerized <strong>FastAPI</strong> service running as a non-root user.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> Diagnosed and resolved two production-style bugs during the migration — a boto3 region resolution error and an under-scoped IAM permission — both of which only surfaced once the app ran inside the cluster under its federated IRSA identity instead of local credentials.
+            </p>
+
+            <p class="tech">
+                Terraform · AWS (EKS, VPC, IAM, S3, DynamoDB, Secrets Manager, ECR) · Kubernetes · Docker · FastAPI · Python 3.11
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/s3ntient-eks" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #0891b2;">Source Code <i class="fa-brands fa-github"></i></a>
+                <span style="margin: 0 10px; color: #ccc;">|</span>
+                <a href="https://github.com/Jbaigorria22/s3ntient" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #555;">Related Project: S3ntient (RAG)</a>
+            </div>
+        </div>
+
         <div class="project highlight" style="border-left: 4px solid #16a34a; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #16a34a;">P1 — La Fortaleza — AWS Highly Available Infrastructure</h3>
 
