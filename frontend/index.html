@@ -12,7 +12,6 @@
 
 <body>
 
-```
 <header>
     <div class="top-bar">
         <h1 class="name">Joaquin Baigorria</h1>
@@ -205,6 +204,35 @@
 
             <div style="margin-top: 10px;">
                 <a href="https://github.com/Jbaigorria22/p4-ai-gallery" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #9333ea;">
+                    Source Code <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="project highlight" style="border-left: 4px solid #65a30d; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #65a30d;">P5 — CloudWatch + SNS Monitoring</h3>
+
+            <p>
+                CloudWatch monitoring and alerting pipeline for an EC2 instance, built with Terraform following an ephemeral infrastructure methodology — built to validate the concept, then torn down.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li><strong>CloudWatch Alarm</strong> on CPUUtilization (≥70%, 2 datapoints over 4 minutes) — requires sustained load before triggering, avoiding false positives from a single CPU spike.</li>
+                <li><strong>SNS Topic</strong> decoupling the alarm (publisher) from the notification channel — a single topic emails on both <code>ALARM</code> and <code>OK</code> state changes, extensible to more subscribers or protocols without touching the alarm itself.</li>
+                <li>CloudWatch Dashboard with a live CPU widget for the monitored instance.</li>
+                <li>Zero SSH exposure — an IAM Role + Instance Profile with <strong>AmazonSSMManagedInstanceCore</strong> enables Session Manager access instead of an open port 22 or a key pair to manage.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> <code>terraform apply</code> failed because the <code>aws_subnets</code> data source pulled every subnet in the default VPC and landed the instance in an Availability Zone where <code>t2.micro</code> isn't offered on this account. Fixed by adding an explicit availability-zone filter to the data source, restricting it to the AZs that actually support the instance type.
+            </p>
+
+            <p class="tech">
+                Terraform · AWS (EC2, CloudWatch, SNS, IAM) · Systems Manager Session Manager
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/p5-cloudwatch-sns" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #65a30d;">
                     Source Code <i class="fa-brands fa-github"></i>
                 </a>
             </div>
@@ -407,7 +435,6 @@
 </div>
 
 <script src="script.js"></script>
-```
 
 </body>
 
