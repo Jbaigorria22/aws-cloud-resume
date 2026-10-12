@@ -38,7 +38,7 @@
         </p>
 
         <p>
-            AWS Certified Solutions Architect – Associate (SAA-C03), earned through a portfolio of hands-on, Terraform-first cloud architecture projects rather than exam prep alone. Now building on that foundation with advanced projects in Kubernetes security and multi-region resilience.
+            AWS Certified Solutions Architect – Associate (SAA-C03), earned through a portfolio of hands-on, Terraform-first cloud architecture projects rather than exam prep alone. Now building on that foundation with advanced projects in secure RAG, Kubernetes security and multi-region resilience.
         </p>
     </section>
 
@@ -59,12 +59,42 @@
             <span>Serverless Architecture</span>
             <span>Generative AI</span>
             <span>RAG Systems</span>
+            <span>AI Security (Prompt Injection)</span>
+            <span>Amazon Bedrock</span>
             <span>SQL / MySQL</span>
         </div>
     </section>
 
     <section>
         <h2>Projects</h2>
+
+        <div class="project highlight" style="border-left: 4px solid #1d4ed8; padding-left: 15px; margin-bottom: 30px;">
+            <h3 style="color: #1d4ed8;">Guard-RAG — Secure RAG Deployed on AWS</h3>
+
+            <p>
+                Document question-answering application built with RAG and designed to resist prompt injection and data leakage, then deployed on AWS with fully private networking. Security was treated as a design requirement and measured with and without defenses, rather than assumed.
+            </p>
+
+            <ul style="font-size: 0.9rem; color: #444; margin-bottom: 10px;">
+                <li>Layered defense against <strong>prompt injection</strong>: regex patterns, an LLM-based semantic check on every chunk before indexing, an output guardrail, system prompt leak detection and rate limiting.</li>
+                <li>Reproducible evaluation harness with <strong>RAGAS</strong> and deterministic attack metrics, comparing the pipeline with and without defenses and across generator models.</li>
+                <li><strong>ECS Fargate</strong> in private subnets with no NAT gateway, reaching Bedrock, ECR and CloudWatch through <strong>VPC endpoints</strong>.</li>
+                <li>ALB behind <strong>AWS WAF</strong> (managed rule sets plus per-IP rate limit), least-privilege <strong>IAM</strong> task and execution roles, and image pulled by digest from ECR.</li>
+                <li>All 39 resources defined in <strong>Terraform</strong>; deployed, validated end to end and destroyed to leave nothing billing.</li>
+            </ul>
+
+            <p>
+                <strong>Technical Challenge:</strong> The injection used in the evaluation matched none of the 16 regex patterns and was only caught by the semantic layer. Quarantining at chunk level also removed a legitimate fact that shared a chunk with the injection, a trade-off documented in the repository.
+            </p>
+
+            <p class="tech">
+                Terraform · AWS (ECS Fargate, ALB, WAF, VPC Endpoints, IAM, ECR, CloudWatch, Bedrock) · Docker · LangChain · ChromaDB · RAGAS · Python
+            </p>
+
+            <div style="margin-top: 10px;">
+                <a href="https://github.com/Jbaigorria22/guard-rag" target="_blank" style="font-size: 0.85rem; font-weight: 600; text-decoration: none; color: #1d4ed8;">Source Code <i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
 
         <div class="project highlight" style="border-left: 4px solid #f97316; padding-left: 15px; margin-bottom: 30px;">
             <h3 style="color: #f97316;">S3ntient — AI-Powered Document Assistant (RAG)</h3>
